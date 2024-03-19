@@ -1,0 +1,619 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<head>
+		<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+		<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+		<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+		<title>Shopping Website</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+		<!-- CSS Reset : BEGIN -->
+		<style type="text/css">
+			/* What it does: Remove spaces around the email design added by some email clients. */
+			/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+			/* CSS Reset */
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+				background: #f1f1f1;
+			}
+
+			* {
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
+
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+
+			table,
+			td {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
+
+			table {
+				border-spacing: 0 !important;
+				border-collapse: collapse !important;
+				table-layout: fixed !important;
+				margin: 0 auto !important;
+			}
+
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			*[x-apple-data-detectors],
+			.unstyle-auto-detected-links *,
+			.aBn {
+				border-bottom: 0 !important;
+				cursor: default !important;
+				color: inherit !important;
+				text-decoration: none !important;
+				font: inherit !important;
+				line-height: inherit !important;
+			}
+
+			.a6S {
+				display: none !important;
+				opacity: 0.01 !important;
+			}
+
+			.im {
+				color: inherit !important;
+			}
+
+			img.g-img+div {
+				display: none !important;
+			}
+
+			@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+				u~div .email-container {
+					min-width: 320px !important;
+				}
+			}
+
+			@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+				u~div .email-container {
+					min-width: 375px !important;
+				}
+			}
+
+			@media only screen and (min-device-width: 414px) {
+				u~div .email-container {
+					min-width: 414px !important;
+				}
+			}
+
+			/* Progressive Enhancements */
+			.primary {
+				background: #f85e9f;
+			}
+
+			.bg_white {
+				background: #ffffff;
+			}
+
+			.bg_light {
+				background: #fafafa;
+			}
+
+			.bg_black {
+				background: #000000;
+			}
+
+			.bg_dark {
+				background: rgba(0, 0, 0, .8);
+			}
+
+			.email-section {
+				padding: 2.5em;
+			}
+
+			.btn {
+				padding: 5px 15px;
+				display: inline-block;
+			}
+
+			.btn.btn-primary {
+				border-radius: 5px;
+				background: #050002;
+				color: #ffffff;
+			}
+
+			.btn.btn-white,
+			.btn.btn-white-outline {
+				border-radius: 5px;
+			}
+
+			.btn.btn-white {
+				background: #ffffff;
+				color: #000000;
+			}
+
+			.btn.btn-white-outline {
+				background: transparent;
+				border: 1px solid #ffffff;
+				color: #ffffff;
+			}
+
+			.btn.btn-black-outline {
+				border-radius: 0px;
+				background: transparent;
+				border: 2px solid #000000;
+				color: #000000;
+				font-weight: 700;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: 'Lato', sans-serif;
+				color: #000000;
+				margin-top: 0;
+				font-weight: 400;
+			}
+
+			body {
+				font-family: 'Lato', sans-serif;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 1.8;
+				color: rgba(0, 0, 0, .4);
+			}
+
+			a {
+				color: #f85e9f;
+			}
+
+			.logo h1 {
+				margin: 0;
+			}
+
+			.logo h1 a {
+				color: #000000;
+				font-size: 20px;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-family: 'Lato', sans-serif;
+				border: 2px solid #000000;
+				padding: .2em 1em;
+			}
+
+			.navigation {
+				padding: 1em 0;
+				border-top: 1px solid rgba(0, 0, 0, .05);
+				border-bottom: 1px solid rgba(0, 0, 0, .05);
+			}
+
+			.navigation li {
+				display: inline-block;
+				margin-left: 5px;
+				margin-right: 5px;
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.navigation li a {
+				color: rgba(0, 0, 0, 1);
+			}
+
+			.hero {
+				position: relative;
+				z-index: 0;
+			}
+
+			.hero .text {
+				color: rgba(0, 0, 0, .3);
+			}
+
+			.hero .text h2 {
+				color: #000000;
+				font-size: 30px;
+				margin-bottom: 0;
+				font-weight: 300;
+			}
+
+			.hero .text h2 span {
+				font-weight: 600;
+				color: #0716f1;
+			}
+
+			.heading-section h2 {
+				color: #000000;
+				font-size: 28px;
+				margin-top: 0;
+				line-height: 1.4;
+				font-weight: 400;
+			}
+
+			.heading-section .subheading {
+				margin-bottom: 20px !important;
+				display: inline-block;
+				font-size: 13px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: rgba(0, 0, 0, .4);
+				position: relative;
+			}
+
+			.heading-section .subheading::after {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -10px;
+				content: '';
+				width: 100%;
+				height: 2px;
+				background: #f85e9f;
+				margin: 0 auto;
+			}
+
+
+			ul.social {
+				padding: 0;
+			}
+
+			ul.social li {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			/*FOOTER*/
+
+			.footer {
+				border-top: 1px solid rgba(211, 10, 10, 0.914);
+				color: rgba(241, 8, 8, 0.5);
+			}
+
+			.footer .heading {
+				color: #000;
+				font-size: 20px;
+			}
+
+			.footer ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			.footer ul li {
+				list-style: none;
+				margin-bottom: 10px;
+			}
+
+			.footer ul li a {
+				color: rgba(0, 0, 0, 1);
+			}
+
+
+			@media screen and (max-width: 500px) {}
+		</style>
+
+
+	</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+	<center style="width: 100%; background-color: #f1f1f1;">
+		<div
+			style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		</div>
+		<div style="max-width: 600px; margin: 0 auto;" class="email-container">
+			<!-- BEGIN BODY -->
+			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+				style="margin: auto;">
+				<tr>
+					<td valign="top" class="bg_white" style="padding: 1em 2.5em 0 2.5em;">
+						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td class="logo" style="text-align: center;">
+									<h1><a href="#">Your Online Store</a></h1>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end tr -->
+				<tr>
+					<td class="bg_white" style="padding: 0;">
+						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td style="text-align: center; padding: 1em;">
+									<nav>
+										<a href="#" style="color: #000; text-decoration: none; padding: 0 1em;">Home</a>
+										<a href="#" style="color: #000; text-decoration: none; padding: 0 1em;">New</a>
+										<a href="#" style="color: #000; text-decoration: none; padding: 0 1em;">Women</a>
+										<a href="#" style="color: #000; text-decoration: none; padding: 0 1em;">Kids</a>
+										<a href="#" style="color: #000; text-decoration: none; padding: 0 1em;">Blog</a>
+									</nav>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</tr><!-- end tr -->
+				<tr>
+					<td valign="middle" class="hero hero-2 bg_white" style="padding: 2em 0 4em 0;">
+						<table>
+							<tr>
+								<td>
+									<div class="text" style="padding: 0 2.5em; text-align: center;">
+										<h2>We Are Shopping Website That Gives You An Affordable <span>Prices</span> &amp;
+											<span>& Discounts</span>
+										</h2>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end tr -->
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Home Improvement</h2>
+																<p>Enjoy your life with this over the toilet storage cabinet!
+																	this over the toilet storage cabinet helps to keep your bathroom tidy without taking!
+																</p>
+																<p><a href="#" class="btn btn-primary ">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-11.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-22.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dining Room $79.99 $109.99</h2>
+																<p>Moustache® is proud to present this brand new Leather Bar Stools. </p>
+																<p><a href="#" class="btn btn-primary">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dress $60.29 $66.99</h2>
+																<p>A small river named Duden flows by their place and supplies it with the necessary
+																	regelialia.</p>
+																<p><a href="#" class="btn btn-primary">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-33.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-44.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Jurassic Park Flip Flop</h2>
+																<p>Foot-forming comfort and a kaleidoscope of statement-making strap designs define this
+																	next generation of our original
+																	mush sandal.
+																	.</p>
+																<p><a href="#" class="btn btn-primary">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Supersonic Hair Dryer`</h2>
+																<p>Use your Hudson’s Bay Mastercard in-store and at thebay.com to get double the points
+																	on every order and save $87.00* on
+																	this item on first-day.</p>
+																<p><a href="#" class="btn btn-primary">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-55.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td>
+															<img src="images/product-6.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tr>
+														<td class="text-services" style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Way people shop</h2>
+																<p>Internet shopping has become increasingly popular due to the convenience and
+																	accessibility it offers consumers.</p>
+																<p><a href="#" class="btn btn-primary">Shop</a></p>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+				<tr>
+					<td valign="middle" class="bg_white" style="padding: 2em 0;">
+						<table>
+							<tr>
+								<td>
+									<div class="text" style="padding: 0 2.5em; text-align: center;">
+										<p><a href="#" class="btn btn-black-outline">Begin Shopping</a></p>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end tr -->
+				<!-- 1 Column Text + Button : END -->
+			</table>
+			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+				style="margin: auto;">
+				<tr>
+					<td valign="middle" class="bg_white footer">
+						<table>
+							<tr style="text-align: left;">
+								<td valign="middle" width="60%" style="padding-top: 20px; text-align: left;">
+									<h3 class="heading">Stay Updated On Our Shopping</h3>
+								</td>
+								<td valign="middle" width="40%" style="padding-top: 20px; text-align: right;">
+									<ul class="social">
+										<li><img src="images/twitter.png" alt=""
+												style="width: 24px; max-width: 600px; height: auto; display: block;"></li>
+										<li><img src="images/005-facebook.png" alt=""
+												style="width: 24px; max-width: 600px; height: auto; display: block;"></li>
+										<li><img src="images/006-instagram-logo.png" alt=""
+												style="width: 24px; max-width: 600px; height: auto; display: block;"></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end: tr -->
+				<tr>
+					<td class="bg_light" style="text-align: center;">
+						<p>No longer want to receive these email? You can <a href="#" style="color: rgba(0,0,0,.8);">Unsubscribe
+								here</a></p>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+	</center>
+</body>
+
+</html>
